@@ -1,2 +1,2 @@
-# Striver-s-SDE-Challenge
-SDE Challenge 
+# dsa-challenge
+dsa Challenge 
