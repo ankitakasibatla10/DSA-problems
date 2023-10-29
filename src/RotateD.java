@@ -39,7 +39,7 @@ public class RotateD {
         int[] arr = {1,2,3,4,5,6,7};
         int k = 2;
 //        rotate_left(arr, n, k);
-//        System.out.println("after rotating to left");
+//        System.out.println("after rotating to left") ;
 //        for(int i=0; i<n; i++){
 //            System.out.print(arr[i] + " ");
 //        }
