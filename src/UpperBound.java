@@ -1,2 +1,27 @@
-package PACKAGE_NAME;public class UpperBound {
+public class UpperBound {
+
+    public static int upperBound(int[] arr, int x, int n){
+        for(int i = 0; i<n; i++){
+            if(arr[i] > x){
+                return i;
+            }
+        }
+        return n;
+    }
+
+//    public static int LowerBound(int[] arr, int x, int n){
+//        for(int i = 0; i<n; i++){
+//            if(arr[i] >= x){
+//                return i;
+//            }
+//        }
+//        return n;
+//    }
+    public static void main(String[] args) {
+        int[] arr = {3, 5, 8, 9, 15, 19};
+        int n = 6, x = 9;
+        int ind = upperBound(arr, x, n);
+        System.out.println("The upper bound is the index: " + ind);
+    }
+
 }
