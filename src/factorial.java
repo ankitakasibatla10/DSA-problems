@@ -14,11 +14,25 @@ public class factorial {
         }
         return n * fact1(n-1);
     }
+
+    public static int fact2(int x1){
+        int sum = 1;
+        if(x1 == 0 || x1 == 1){
+            return 1;
+        }else{
+            sum = sum * fact2(x1-1);
+        }
+        return sum;
+    }
+
     public static void main(String[] args){
         int x = 7;
-        int res = fact(x);
-        System.out.println(res);
-        int n = 6;
-        System.out.println(fact1(n));
+//        int res = fact(x);
+//        System.out.println(res);
+//        int n = 6;
+//        System.out.println(fact1(n));
+
+        int x1 = 5;
+        System.out.println(fact2(x1));
     }
 }
