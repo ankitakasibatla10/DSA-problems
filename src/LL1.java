@@ -104,6 +104,49 @@ public class LL1 {
         return count;
     }
 
+    public static Node1 swapKfromBorEnds(Node1 head, int k){
+        Node1 temp = head;
+        if(temp.next == null){
+            return head;
+        }
+        int c = 0;
+        while(temp != null){
+            c++;
+            temp = temp.next;
+        }
+        Node1 temp1 = head, temp2 = head;
+        int d = c - k + 1;
+        for(int i=1; i<k; i++){
+            temp1 = temp1.next;
+
+        }
+        for(int i=1; i<d; i++){
+            temp2 = temp2.next;
+
+        }
+        int swap = temp1.data;
+        temp1.data = temp2.data;
+        temp2.data = swap;
+        return head;
+    }
+
+    public static Node1 swapKfromBorEnds2(Node1 head, int k){
+        Node1 fast = head, slow = head;
+        for(int i=1; i<k; i++){
+            fast = fast.next;
+        }
+        Node1 temp2 = fast;
+        while(fast.next != null){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        int swap = temp2.data;
+        temp2.data = slow.data;
+        slow.data = swap;
+        return head;
+
+    }
+
 
     public static void main(String[] args) {
         LL1 l1 = new LL1();
@@ -112,16 +155,25 @@ public class LL1 {
         l1.insert(34);
         l1.insert(123);
         l1.insert(3);
+        l1.insert(8);
+        l1.insert(16);
         l1.display();
         System.out.println("Length of ll : " + lengthLL());
-        insertAtPos(19, 3);
-        l1.display();
-        deleteAtPos(4);
-        l1.display();
+//        insertAtPos(19, 3);
+//        l1.display();
+//        deleteAtPos(4);
+   //     l1.display();
 //        deleteNodeWithoutHead(34);
+     //   l1.display();
+ //       removeDuplicates(l1.head);
+ //       l1.display();
+//        int k = 2;
+//        swapKfromBorEnds(l1.head,2);
+//        l1.display();
+        int k = 2;
+        swapKfromBorEnds2(l1.head,2);
         l1.display();
-        removeDuplicates(l1.head);
-        l1.display();
+
     }
 }
 
