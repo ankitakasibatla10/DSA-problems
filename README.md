@@ -1,6 +1,6 @@
 # DSA Problems Repository
 
-This repository contains my solutions for different Data Structures and Algorithms questions, ranging from basic to medium level.
+This repository contains my solutions for different Data Structures and Algorithms questions in Java, ranging from basic to medium level.
 
 
 
